@@ -9,7 +9,7 @@ button.onclick = function () {
     const input = document.getElementById("girlfriendName");
     const message = document.getElementById("message");
 
-    if (input.value.trim().toLowerCase() === "Mansi Singh") {
+    if (input.value.trim().toLowerCase() === "mansi singh") {
 
         document.getElementById("welcomeScreen").style.display = "none";
         document.getElementById("searchScreen").style.display = "block";
