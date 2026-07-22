@@ -70,26 +70,37 @@ button.onclick = function () {
 
         // Final Result
         setTimeout(function () {
-            loading.innerHTML = `
-            <h2>❤️ 1 MATCH FOUND ❤️</h2>
 
-            <br>
+    loading.innerHTML = `
+    <h2>❤️ 1 MATCH FOUND ❤️</h2>
 
-            👑 <b>Name:</b> Bhoot
+    <br>
 
-            <br><br>
+    👑 <b>Name:</b> Bhoot
 
-            💖 <b>Status:</b> Cutest Girlfriend Alive
+    <br><br>
 
-            <br><br>
+    💖 <b>Status:</b> Cutest Girlfriend Alive
 
-            🌹 <b>Relationship Status:</b> Apple's Forever Person
+    <br><br>
 
-            <br><br>
+    🌹 <b>Relationship Status:</b> Apple's Forever Person
 
-            ✅ Identity Verified
-            `;
-        }, 15000);
+    <br><br>
+
+    ✅ Identity Verified
+    `;
+
+    // Wait 2 more seconds, then go to the next screen
+    setTimeout(function () {
+
+        document.getElementById("searchScreen").style.display = "none";
+
+        document.getElementById("boyfriendScreen").style.display = "block";
+
+    }, 2000);
+
+}, 15000);
 
     }
 
