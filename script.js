@@ -9,7 +9,7 @@ button.onclick = function () {
     const input = document.getElementById("girlfriendName");
     const message = document.getElementById("message");
 
-    if (input.value.trim().toLowerCase() === "bhoot") {
+    if (input.value.trim().toLowerCase() === "Mansi Singh") {
 
         document.getElementById("welcomeScreen").style.display = "none";
         document.getElementById("searchScreen").style.display = "block";
@@ -81,7 +81,7 @@ button.onclick = function () {
 
             <br>
 
-            👑 <b>Name:</b> Bhoot
+            👑 <b>Name:</b> Mansi Singh
 
             <br><br>
 
@@ -89,7 +89,7 @@ button.onclick = function () {
 
             <br><br>
 
-            🌹 <b>Relationship Status:</b> Apple's Forever Person
+            🌹 <b>Relationship Status:</b> Abhinav's Forever Person
 
             <br><br>
 
@@ -142,7 +142,7 @@ boyfriendBtn.onclick = function () {
 
     const boyfriendMessage = document.getElementById("boyfriendMessage");
 
-    if (boyfriendName === "apple") {
+    if (boyfriendName === "Abhinav Nair") {
 
         boyfriendMessage.style.color = "green";
 
@@ -163,7 +163,7 @@ boyfriendBtn.onclick = function () {
         boyfriendMessage.style.color = "red";
 
         boyfriendMessage.innerHTML =
-            "❌ Incorrect Boyfriend!<br>Only Bhoot's Boyfriend can continue ❤️";
+            "❌ Incorrect Boyfriend!<br>Only Mansi's Boyfriend can continue ❤️";
 
     }
 
@@ -193,22 +193,25 @@ envelope.onclick = function () {
 
 function typeLetter() {
 
-    const message = `Dear Bhoot,
+    const message = `Meri Janeman,
 
 I know I made mistakes.
 
-I'm truly sorry if I ever hurt you.
+I'm truly sorry for hurting you.
 
 Every laugh, every smile, every little moment with you means the world to me.
 
 No matter what happens,
 
-I'll always choose you.
+I always want  you by my side.
 
 Thank you for being my safe place.
 
+I Miss You So much Babe
+
+I Love youuuuuuuuuuuuuuuuuuuu
 ❤️
-- Apple`;
+- ABHINAV`;
 
     const letter = document.getElementById("letterText");
 
@@ -328,7 +331,7 @@ if (yesBtn) {
     yesBtn.onclick = function () {
 
         document.getElementById("finalMessage").innerHTML =
-        "❤️ I knew it! Apple loves you forever. ❤️🥹";
+        "❤️ I knew it! ABHINAV loves you forever. ❤️🥹";
 
         noBtn.style.display = "none";
 
