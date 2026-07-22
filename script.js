@@ -7,36 +7,91 @@ button.onclick = function () {
 
     if (input.value.trim().toLowerCase() === "bhoot") {
 
-        // Hide the first screen
+        // Hide first screen
         document.getElementById("welcomeScreen").style.display = "none";
 
-        // Show the second screen
+        // Show search screen
         document.getElementById("searchScreen").style.display = "block";
 
         const loading = document.getElementById("loadingText");
 
-        loading.innerHTML = "🔍 Searching cutest girlfriend...";
-
-        setTimeout(function () {
-            loading.innerHTML = "💖 1 Match Found";
-        }, 1500);
+        loading.innerHTML = `
+        🔍 Initializing Love Scanner...
+        `;
 
         setTimeout(function () {
             loading.innerHTML = `
-                ❤️ 1 Match Found ❤️
-                <br><br>
-                Name: Bhoot
-                <br>
-                Status: Cutest Girlfriend Alive 👑
-                <br><br>
-                ✅ Identity Verified
+            🔍 Initializing Love Scanner... ✅
+            <br><br>
+            📡 Searching for cutest girlfriend...
+            `;
+        }, 1000);
+
+        setTimeout(function () {
+            loading.innerHTML = `
+            🔍 Initializing Love Scanner... ✅
+            <br>
+            📡 Searching for cutest girlfriend... ✅
+            <br><br>
+            😊 Analyzing smile...
+            `;
+        }, 2000);
+
+        setTimeout(function () {
+            loading.innerHTML = `
+            🔍 Initializing Love Scanner... ✅
+            <br>
+            📡 Searching for cutest girlfriend... ✅
+            <br>
+            😊 Smile Analysis... ✅
+            <br><br>
+            ❤️ Measuring Cuteness...
             `;
         }, 3000);
 
-    } else {
+        setTimeout(function () {
+            loading.innerHTML = `
+            🔍 Initializing Love Scanner... ✅
+            <br>
+            📡 Searching for cutest girlfriend... ✅
+            <br>
+            😊 Smile Analysis... ✅
+            <br>
+            ❤️ Cuteness Level... 1000/100 ❤️
+            <br><br>
+            🎀 Verifying Identity...
+            `;
+        }, 4000);
+
+        setTimeout(function () {
+            loading.innerHTML = `
+            <h2>❤️ 1 MATCH FOUND ❤️</h2>
+
+            <br>
+
+            👑 <b>Name:</b> Bhoot
+
+            <br><br>
+
+            💖 <b>Status:</b> Cutest Girlfriend Alive
+
+            <br><br>
+
+            🌹 <b>Relationship Status:</b> Apple's Forever Person
+
+            <br><br>
+
+            ✅ Identity Verified
+            `;
+        }, 5500);
+
+    }
+
+    else {
 
         message.style.color = "red";
         message.innerHTML = "❌ Unauthorized User";
 
     }
+
 };
