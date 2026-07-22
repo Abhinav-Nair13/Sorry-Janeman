@@ -11,23 +11,17 @@ button.onclick = function () {
 
     if (input.value.trim().toLowerCase() === "bhoot") {
 
-        // Hide first screen
         document.getElementById("welcomeScreen").style.display = "none";
-
-        // Show scanner
-        document.getElementById("searchScreen").style.display = "block";
+        document.getElementById("searchScreen").style.display = "flex";
 
         const loading = document.getElementById("loadingText");
 
-        // Hide Continue button initially
         document.getElementById("continueBtn").style.display = "none";
 
-        // Step 1
         loading.innerHTML = `
         🔍 Initializing Love Scanner...
         `;
 
-        // Step 2
         setTimeout(function () {
 
             loading.innerHTML = `
@@ -38,7 +32,6 @@ button.onclick = function () {
 
         }, 2000);
 
-        // Step 3
         setTimeout(function () {
 
             loading.innerHTML = `
@@ -51,7 +44,6 @@ button.onclick = function () {
 
         }, 5000);
 
-        // Step 4
         setTimeout(function () {
 
             loading.innerHTML = `
@@ -66,7 +58,6 @@ button.onclick = function () {
 
         }, 8000);
 
-        // Step 5
         setTimeout(function () {
 
             loading.innerHTML = `
@@ -83,7 +74,6 @@ button.onclick = function () {
 
         }, 11000);
 
-        // Final Result
         setTimeout(function () {
 
             loading.innerHTML = `
@@ -106,12 +96,13 @@ button.onclick = function () {
             ✅ Identity Verified
             `;
 
-            // Show Continue button
             document.getElementById("continueBtn").style.display = "block";
 
         }, 15000);
 
-    } else {
+    }
+
+    else {
 
         message.style.color = "red";
         message.innerHTML = "❌ Unauthorized User";
@@ -130,7 +121,7 @@ const continueBtn = document.getElementById("continueBtn");
 continueBtn.onclick = function () {
 
     document.getElementById("searchScreen").style.display = "none";
-    document.getElementById("boyfriendScreen").style.display = "block";
+    document.getElementById("boyfriendScreen").style.display = "flex";
 
 };
 
@@ -161,11 +152,13 @@ boyfriendBtn.onclick = function () {
         setTimeout(function () {
 
             document.getElementById("boyfriendScreen").style.display = "none";
-            document.getElementById("envelopeScreen").style.display = "block";
+            document.getElementById("envelopeScreen").style.display = "flex";
 
         }, 2000);
 
-    } else {
+    }
+
+    else {
 
         boyfriendMessage.style.color = "red";
 
@@ -175,6 +168,12 @@ boyfriendBtn.onclick = function () {
     }
 
 };
+
+
+// ----------------------
+// ENVELOPE
+// ----------------------
+
 const envelope = document.getElementById("envelope");
 
 envelope.onclick = function () {
@@ -186,6 +185,12 @@ envelope.onclick = function () {
     typeLetter();
 
 };
+
+
+// ----------------------
+// LETTER TYPING
+// ----------------------
+
 function typeLetter() {
 
     const message = `Dear Bhoot,
@@ -210,22 +215,23 @@ Thank you for being my safe place.
     const nextButton = document.getElementById("letterNextBtn");
 
     letter.innerHTML = "";
+    nextButton.style.display = "none";
 
     let i = 0;
 
     function typing() {
 
-        if(i < message.length){
+        if (i < message.length) {
 
             letter.innerHTML += message.charAt(i);
 
             i++;
 
-            setTimeout(typing,40);
+            setTimeout(typing, 40);
 
         }
 
-        else{
+        else {
 
             nextButton.style.display = "block";
 
@@ -236,3 +242,18 @@ Thank you for being my safe place.
     typing();
 
 }
+
+
+// ----------------------
+// LETTER NEXT BUTTON
+// ----------------------
+
+const letterNextBtn = document.getElementById("letterNextBtn");
+
+letterNextBtn.onclick = function () {
+
+    document.getElementById("letterScreen").style.display = "none";
+
+    document.getElementById("photo1Screen").style.display = "flex";
+
+};
