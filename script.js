@@ -12,7 +12,7 @@ button.onclick = function () {
     if (input.value.trim().toLowerCase() === "bhoot") {
 
         document.getElementById("welcomeScreen").style.display = "none";
-        document.getElementById("searchScreen").style.display = "flex";
+        document.getElementById("searchScreen").style.display = "block";
 
         const loading = document.getElementById("loadingText");
 
@@ -121,7 +121,7 @@ const continueBtn = document.getElementById("continueBtn");
 continueBtn.onclick = function () {
 
     document.getElementById("searchScreen").style.display = "none";
-    document.getElementById("boyfriendScreen").style.display = "flex";
+    document.getElementById("boyfriendScreen").style.display = "block";
 
 };
 
@@ -152,7 +152,7 @@ boyfriendBtn.onclick = function () {
         setTimeout(function () {
 
             document.getElementById("boyfriendScreen").style.display = "none";
-            document.getElementById("envelopeScreen").style.display = "flex";
+            document.getElementById("envelopeScreen").style.display = "block";
 
         }, 2000);
 
@@ -180,7 +180,7 @@ envelope.onclick = function () {
 
     document.getElementById("envelopeScreen").style.display = "none";
 
-    document.getElementById("letterScreen").style.display = "flex";
+    document.getElementById("letterScreen").style.display = "block";
 
     typeLetter();
 
@@ -254,6 +254,6 @@ letterNextBtn.onclick = function () {
 
     document.getElementById("letterScreen").style.display = "none";
 
-    document.getElementById("photo1Screen").style.display = "flex";
+    document.getElementById("photo1Screen").style.display = "block";
 
 };
