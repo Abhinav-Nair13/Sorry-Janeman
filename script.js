@@ -266,3 +266,47 @@ photo1NextBtn.onclick = function(){
     document.getElementById("photo2Screen").style.display = "block";
 
 };
+// ----------------------
+// PHOTO 2 NEXT
+// ----------------------
+
+const photo2NextBtn = document.getElementById("photo2NextBtn");
+
+photo2NextBtn.onclick = function(){
+
+    document.getElementById("photo2Screen").style.display = "none";
+
+    document.getElementById("finalScreen").style.display = "block";
+
+};
+
+
+// ----------------------
+// FINAL PAGE
+// ----------------------
+
+const noBtn = document.getElementById("noBtn");
+
+noBtn.onmouseover = function(){
+
+    const x = Math.random()*180;
+
+    const y = Math.random()*80;
+
+    noBtn.style.left = x + "px";
+
+    noBtn.style.top = y + "px";
+
+};
+
+
+const yesBtn = document.getElementById("yesBtn");
+
+yesBtn.onclick = function(){
+
+    document.getElementById("finalMessage").innerHTML =
+    "❤️ I knew it! Apple loves you forever. ❤️🥹";
+
+    noBtn.style.display = "none";
+
+};
