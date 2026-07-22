@@ -290,6 +290,8 @@ if (photo2NextBtn) {
 
     photo2NextBtn.onclick = function () {
 
+        alert("Button clicked!");
+
         document.getElementById("photo2Screen").style.display = "none";
         document.getElementById("finalScreen").style.display = "block";
 
