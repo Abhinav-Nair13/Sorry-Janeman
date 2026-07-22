@@ -71,36 +71,35 @@ button.onclick = function () {
         // Final Result
         setTimeout(function () {
 
-    loading.innerHTML = `
-    <h2>❤️ 1 MATCH FOUND ❤️</h2>
+            loading.innerHTML = `
+            <h2>❤️ 1 MATCH FOUND ❤️</h2>
 
-    <br>
+            <br>
 
-    👑 <b>Name:</b> Bhoot
+            👑 <b>Name:</b> Bhoot
 
-    <br><br>
+            <br><br>
 
-    💖 <b>Status:</b> Cutest Girlfriend Alive
+            💖 <b>Status:</b> Cutest Girlfriend Alive
 
-    <br><br>
+            <br><br>
 
-    🌹 <b>Relationship Status:</b> Apple's Forever Person
+            🌹 <b>Relationship Status:</b> Apple's Forever Person
 
-    <br><br>
+            <br><br>
 
-    ✅ Identity Verified
-    `;
+            ✅ Identity Verified
+            `;
 
-    // Wait 2 more seconds, then go to the next screen
-    setTimeout(function () {
+            // Wait 2 seconds then open boyfriend verification
+            setTimeout(function () {
 
-        document.getElementById("searchScreen").style.display = "none";
+                document.getElementById("searchScreen").style.display = "none";
+                document.getElementById("boyfriendScreen").style.display = "block";
 
-        document.getElementById("boyfriendScreen").style.display = "block";
+            }, 2000);
 
-    }, 2000);
-
-}, 15000);
+        }, 15000);
 
     }
 
@@ -108,6 +107,51 @@ button.onclick = function () {
 
         message.style.color = "red";
         message.innerHTML = "❌ Unauthorized User";
+
+    }
+
+};
+
+
+// ----------------------
+// BOYFRIEND VERIFICATION
+// ----------------------
+
+const boyfriendBtn = document.getElementById("boyfriendBtn");
+
+boyfriendBtn.onclick = function () {
+
+    const boyfriendName = document
+        .getElementById("boyfriendName")
+        .value
+        .trim()
+        .toLowerCase();
+
+    const boyfriendMessage = document.getElementById("boyfriendMessage");
+
+    if (boyfriendName === "apple") {
+
+        boyfriendMessage.style.color = "green";
+
+        boyfriendMessage.innerHTML =
+            "✅ Boyfriend Verified ❤️<br><br>Loading Secret Surprise...";
+
+        // Next screen (Envelope)
+        setTimeout(function () {
+
+            document.getElementById("boyfriendScreen").style.display = "none";
+            document.getElementById("envelopeScreen").style.display = "block";
+
+        }, 2000);
+
+    }
+
+    else {
+
+        boyfriendMessage.style.color = "red";
+
+        boyfriendMessage.innerHTML =
+            "❌ Incorrect Boyfriend!<br>Only Bhoot's Apple can continue ❤️";
 
     }
 
