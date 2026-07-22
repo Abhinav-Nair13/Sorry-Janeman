@@ -163,7 +163,7 @@ boyfriendBtn.onclick = function () {
         boyfriendMessage.style.color = "red";
 
         boyfriendMessage.innerHTML =
-            "❌ Incorrect Boyfriend!<br>Only Bhoot's Apple can continue ❤️";
+            "❌ Incorrect Boyfriend!<br>Only Bhoot's Boyfriend can continue ❤️";
 
     }
 
