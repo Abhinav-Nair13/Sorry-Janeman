@@ -257,3 +257,12 @@ letterNextBtn.onclick = function () {
     document.getElementById("photo1Screen").style.display = "block";
 
 };
+const photo1NextBtn = document.getElementById("photo1NextBtn");
+
+photo1NextBtn.onclick = function(){
+
+    document.getElementById("photo1Screen").style.display = "none";
+
+    document.getElementById("photo2Screen").style.display = "block";
+
+};
