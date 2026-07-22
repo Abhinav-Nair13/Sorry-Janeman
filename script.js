@@ -142,7 +142,7 @@ boyfriendBtn.onclick = function () {
 
     const boyfriendMessage = document.getElementById("boyfriendMessage");
 
-    if (boyfriendName === "Abhinav Nair") {
+    if (boyfriendName === "abhinav nair") {
 
         boyfriendMessage.style.color = "green";
 
