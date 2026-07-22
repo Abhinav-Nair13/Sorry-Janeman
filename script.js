@@ -175,3 +175,12 @@ boyfriendBtn.onclick = function () {
     }
 
 };
+const envelope = document.getElementById("envelope");
+
+envelope.onclick = function () {
+
+    document.getElementById("envelopeScreen").style.display = "none";
+
+    document.getElementById("letterScreen").style.display = "block";
+
+};
