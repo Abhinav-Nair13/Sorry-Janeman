@@ -203,3 +203,26 @@ button:hover{
     box-shadow:0 8px 20px rgba(0,0,0,.2);
 
 }
+#choiceButtons{
+
+    position:relative;
+
+    height:120px;
+
+}
+
+#yesBtn{
+
+    width:120px;
+
+    margin-right:10px;
+
+}
+
+#noBtn{
+
+    width:120px;
+
+    position:absolute;
+
+}
