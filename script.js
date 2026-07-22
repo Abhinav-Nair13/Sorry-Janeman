@@ -1,3 +1,7 @@
+// ----------------------
+// GIRLFRIEND VERIFICATION
+// ----------------------
+
 const button = document.getElementById("verifyBtn");
 
 button.onclick = function () {
@@ -10,10 +14,13 @@ button.onclick = function () {
         // Hide first screen
         document.getElementById("welcomeScreen").style.display = "none";
 
-        // Show search screen
+        // Show scanner
         document.getElementById("searchScreen").style.display = "block";
 
         const loading = document.getElementById("loadingText");
+
+        // Hide Continue button initially
+        document.getElementById("continueBtn").style.display = "none";
 
         // Step 1
         loading.innerHTML = `
@@ -22,15 +29,18 @@ button.onclick = function () {
 
         // Step 2
         setTimeout(function () {
+
             loading.innerHTML = `
             🔍 Initializing Love Scanner... ✅
             <br><br>
             📡 Searching for cutest girlfriend...
             `;
+
         }, 2000);
 
         // Step 3
         setTimeout(function () {
+
             loading.innerHTML = `
             🔍 Initializing Love Scanner... ✅
             <br>
@@ -38,10 +48,12 @@ button.onclick = function () {
             <br><br>
             😊 Analyzing smile...
             `;
+
         }, 5000);
 
         // Step 4
         setTimeout(function () {
+
             loading.innerHTML = `
             🔍 Initializing Love Scanner... ✅
             <br>
@@ -51,10 +63,12 @@ button.onclick = function () {
             <br><br>
             ❤️ Measuring Cuteness...
             `;
+
         }, 8000);
 
         // Step 5
         setTimeout(function () {
+
             loading.innerHTML = `
             🔍 Initializing Love Scanner... ✅
             <br>
@@ -66,6 +80,7 @@ button.onclick = function () {
             <br><br>
             🎀 Verifying Identity...
             `;
+
         }, 11000);
 
         // Final Result
@@ -91,18 +106,31 @@ button.onclick = function () {
             ✅ Identity Verified
             `;
 
-           document.getElementById("continueBtn").style.display = "block";
+            // Show Continue button
+            document.getElementById("continueBtn").style.display = "block";
 
         }, 15000);
 
-    }
-
-    else {
+    } else {
 
         message.style.color = "red";
         message.innerHTML = "❌ Unauthorized User";
 
     }
+
+};
+
+
+// ----------------------
+// CONTINUE BUTTON
+// ----------------------
+
+const continueBtn = document.getElementById("continueBtn");
+
+continueBtn.onclick = function () {
+
+    document.getElementById("searchScreen").style.display = "none";
+    document.getElementById("boyfriendScreen").style.display = "block";
 
 };
 
@@ -130,7 +158,6 @@ boyfriendBtn.onclick = function () {
         boyfriendMessage.innerHTML =
             "✅ Boyfriend Verified ❤️<br><br>Loading Secret Surprise...";
 
-        // Next screen (Envelope)
         setTimeout(function () {
 
             document.getElementById("boyfriendScreen").style.display = "none";
@@ -138,9 +165,7 @@ boyfriendBtn.onclick = function () {
 
         }, 2000);
 
-    }
-
-    else {
+    } else {
 
         boyfriendMessage.style.color = "red";
 
@@ -148,14 +173,5 @@ boyfriendBtn.onclick = function () {
             "❌ Incorrect Boyfriend!<br>Only Bhoot's Apple can continue ❤️";
 
     }
-
-};
-const continueBtn = document.getElementById("continueBtn");
-
-continueBtn.onclick = function () {
-
-    document.getElementById("searchScreen").style.display = "none";
-
-    document.getElementById("boyfriendScreen").style.display = "block";
 
 };
