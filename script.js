@@ -181,6 +181,8 @@ envelope.onclick = function () {
 
     document.getElementById("envelopeScreen").style.display = "none";
 
-    document.getElementById("letterScreen").style.display = "block";
+    document.getElementById("letterScreen").style.display = "flex";
+
+    typeLetter();
 
 };
