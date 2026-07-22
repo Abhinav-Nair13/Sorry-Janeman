@@ -186,3 +186,53 @@ envelope.onclick = function () {
     typeLetter();
 
 };
+function typeLetter() {
+
+    const message = `Dear Bhoot,
+
+I know I made mistakes.
+
+I'm truly sorry if I ever hurt you.
+
+Every laugh, every smile, every little moment with you means the world to me.
+
+No matter what happens,
+
+I'll always choose you.
+
+Thank you for being my safe place.
+
+❤️
+- Apple`;
+
+    const letter = document.getElementById("letterText");
+
+    const nextButton = document.getElementById("letterNextBtn");
+
+    letter.innerHTML = "";
+
+    let i = 0;
+
+    function typing() {
+
+        if(i < message.length){
+
+            letter.innerHTML += message.charAt(i);
+
+            i++;
+
+            setTimeout(typing,40);
+
+        }
+
+        else{
+
+            nextButton.style.display = "block";
+
+        }
+
+    }
+
+    typing();
+
+}
