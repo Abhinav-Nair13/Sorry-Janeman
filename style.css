@@ -257,3 +257,16 @@ button:hover{
     top:-30px;
 
 }
+#letterText{
+
+    text-align:left;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+    min-height:260px;
+
+    white-space:pre-wrap;
+
+}
