@@ -250,35 +250,52 @@ Thank you for being my safe place.
 
 const letterNextBtn = document.getElementById("letterNextBtn");
 
-letterNextBtn.onclick = function () {
+if (letterNextBtn) {
 
-    document.getElementById("letterScreen").style.display = "none";
+    letterNextBtn.onclick = function () {
 
-    document.getElementById("photo1Screen").style.display = "block";
+        document.getElementById("letterScreen").style.display = "none";
+        document.getElementById("photo1Screen").style.display = "block";
 
-};
+    };
+
+}
+
+
+// ----------------------
+// PHOTO 1 NEXT
+// ----------------------
+
 const photo1NextBtn = document.getElementById("photo1NextBtn");
 
-photo1NextBtn.onclick = function(){
+if (photo1NextBtn) {
 
-    document.getElementById("photo1Screen").style.display = "none";
+    photo1NextBtn.onclick = function () {
 
-    document.getElementById("photo2Screen").style.display = "block";
+        document.getElementById("photo1Screen").style.display = "none";
+        document.getElementById("photo2Screen").style.display = "block";
 
-};
+    };
+
+}
+
+
 // ----------------------
 // PHOTO 2 NEXT
 // ----------------------
 
 const photo2NextBtn = document.getElementById("photo2NextBtn");
 
-photo2NextBtn.onclick = function(){
+if (photo2NextBtn) {
 
-    document.getElementById("photo2Screen").style.display = "none";
+    photo2NextBtn.onclick = function () {
 
-    document.getElementById("finalScreen").style.display = "block";
+        document.getElementById("photo2Screen").style.display = "none";
+        document.getElementById("finalScreen").style.display = "block";
 
-};
+    };
+
+}
 
 
 // ----------------------
@@ -287,26 +304,32 @@ photo2NextBtn.onclick = function(){
 
 const noBtn = document.getElementById("noBtn");
 
-noBtn.onmouseover = function(){
+if (noBtn) {
 
-    const x = Math.random()*180;
+    noBtn.onmouseover = function () {
 
-    const y = Math.random()*80;
+        const x = Math.random() * 180;
+        const y = Math.random() * 80;
 
-    noBtn.style.left = x + "px";
+        noBtn.style.left = x + "px";
+        noBtn.style.top = y + "px";
 
-    noBtn.style.top = y + "px";
+    };
 
-};
+}
 
 
 const yesBtn = document.getElementById("yesBtn");
 
-yesBtn.onclick = function(){
+if (yesBtn) {
 
-    document.getElementById("finalMessage").innerHTML =
-    "❤️ I knew it! Apple loves you forever. ❤️🥹";
+    yesBtn.onclick = function () {
 
-    noBtn.style.display = "none";
+        document.getElementById("finalMessage").innerHTML =
+        "❤️ I knew it! Apple loves you forever. ❤️🥹";
 
-};
+        noBtn.style.display = "none";
+
+    };
+
+}
