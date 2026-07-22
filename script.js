@@ -15,18 +15,21 @@ button.onclick = function () {
 
         const loading = document.getElementById("loadingText");
 
+        // Step 1
         loading.innerHTML = `
         🔍 Initializing Love Scanner...
         `;
 
+        // Step 2
         setTimeout(function () {
             loading.innerHTML = `
             🔍 Initializing Love Scanner... ✅
             <br><br>
             📡 Searching for cutest girlfriend...
             `;
-        }, 1000);
+        }, 2000);
 
+        // Step 3
         setTimeout(function () {
             loading.innerHTML = `
             🔍 Initializing Love Scanner... ✅
@@ -35,8 +38,9 @@ button.onclick = function () {
             <br><br>
             😊 Analyzing smile...
             `;
-        }, 2000);
+        }, 5000);
 
+        // Step 4
         setTimeout(function () {
             loading.innerHTML = `
             🔍 Initializing Love Scanner... ✅
@@ -47,8 +51,9 @@ button.onclick = function () {
             <br><br>
             ❤️ Measuring Cuteness...
             `;
-        }, 3000);
+        }, 8000);
 
+        // Step 5
         setTimeout(function () {
             loading.innerHTML = `
             🔍 Initializing Love Scanner... ✅
@@ -61,8 +66,9 @@ button.onclick = function () {
             <br><br>
             🎀 Verifying Identity...
             `;
-        }, 4000);
+        }, 11000);
 
+        // Final Result
         setTimeout(function () {
             loading.innerHTML = `
             <h2>❤️ 1 MATCH FOUND ❤️</h2>
@@ -83,7 +89,7 @@ button.onclick = function () {
 
             ✅ Identity Verified
             `;
-        }, 5500);
+        }, 15000);
 
     }
 
