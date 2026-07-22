@@ -99,3 +99,22 @@ button:hover{
     font-weight:bold;
 
 }
+#searchScreen{
+
+    text-align:center;
+
+    background:white;
+
+    width:500px;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+    line-height:2;
+
+    font-size:22px;
+
+}
