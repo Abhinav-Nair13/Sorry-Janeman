@@ -91,13 +91,7 @@ button.onclick = function () {
             ✅ Identity Verified
             `;
 
-            // Wait 2 seconds then open boyfriend verification
-            setTimeout(function () {
-
-                document.getElementById("searchScreen").style.display = "none";
-                document.getElementById("boyfriendScreen").style.display = "block";
-
-            }, 2000);
+           document.getElementById("continueBtn").style.display = "block";
 
         }, 15000);
 
@@ -154,5 +148,14 @@ boyfriendBtn.onclick = function () {
             "❌ Incorrect Boyfriend!<br>Only Bhoot's Apple can continue ❤️";
 
     }
+
+};
+const continueBtn = document.getElementById("continueBtn");
+
+continueBtn.onclick = function () {
+
+    document.getElementById("searchScreen").style.display = "none";
+
+    document.getElementById("boyfriendScreen").style.display = "block";
 
 };
