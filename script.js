@@ -12,7 +12,7 @@ function verifyName(){
 
     const message = document.getElementById("message");
 
-    if(name === "Mansi Singh"){
+    if(name === "bhoot"){
 
         message.style.color = "green";
 
