@@ -6,11 +6,11 @@
 
 body{
     height:100vh;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     background:linear-gradient(135deg,#ff9ecf,#ffd6e8);
 }
 
-/* ALL SCREENS */
+/* Every screen */
 
 #welcomeScreen,
 #searchScreen,
@@ -21,18 +21,20 @@ body{
 #photo2Screen,
 #finalScreen{
 
+    display:none;
     width:100%;
     height:100vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
+    position:relative;
 
 }
 
-/* CARD */
+/* First screen visible */
+
+#welcomeScreen{
+    display:block;
+}
+
+/* Card */
 
 .card{
 
@@ -48,83 +50,49 @@ body{
 
     box-shadow:0 10px 30px rgba(0,0,0,.2);
 
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
 }
 
-/* HEADINGS */
-
-h1{
+h1,h2{
 
     color:#ff3d7f;
-
     margin-bottom:20px;
 
 }
-
-h2{
-
-    color:#ff3d7f;
-
-    margin-bottom:20px;
-
-}
-
-/* TEXT */
 
 p{
 
     margin-bottom:20px;
 
-    font-size:18px;
-
 }
-
-/* INPUT */
 
 input{
 
     width:100%;
-
     padding:14px;
-
     border-radius:10px;
-
     border:2px solid #ff8fb8;
-
     font-size:16px;
 
-    outline:none;
-
 }
-
-input:focus{
-
-    border-color:#ff3d7f;
-
-}
-
-/* BUTTON */
 
 button{
 
     width:100%;
-
     margin-top:20px;
-
     padding:14px;
-
     border:none;
-
     border-radius:10px;
-
     background:#ff3d7f;
-
     color:white;
-
     font-size:18px;
-
     cursor:pointer;
-
-    transition:.3s;
 
 }
 
@@ -132,61 +100,25 @@ button:hover{
 
     background:#ff1f6b;
 
-    transform:scale(1.03);
-
 }
-
-/* MESSAGES */
-
-#message,
-#boyfriendMessage{
-
-    margin-top:20px;
-
-    font-weight:bold;
-
-}
-
-/* LOVE SCANNER */
 
 #loadingText{
 
     line-height:2;
-
     font-size:20px;
 
 }
-
-/* ENVELOPE */
 
 #envelope{
 
     width:150px;
     height:100px;
-
+    background:#f2c7e5;
     margin:30px auto;
-
-    background:#f6d4ec;
-
+    cursor:pointer;
     position:relative;
 
-    cursor:pointer;
-
-    border-radius:8px;
-
-    transition:.4s;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-
 }
-
-#envelope:hover{
-
-    transform:scale(1.08);
-
-}
-
-/* Top flap */
 
 #envelope::before{
 
@@ -194,19 +126,14 @@ button:hover{
 
     position:absolute;
 
-    top:0;
-    left:0;
-
     width:0;
     height:0;
 
     border-left:75px solid transparent;
     border-right:75px solid transparent;
-    border-top:50px solid #ebc0df;
+    border-top:50px solid #e6b3d9;
 
 }
-
-/* Bottom flap */
 
 #envelope::after{
 
@@ -215,23 +142,19 @@ button:hover{
     position:absolute;
 
     bottom:0;
-    left:0;
 
     width:0;
     height:0;
 
     border-left:75px solid transparent;
     border-right:75px solid transparent;
-    border-bottom:50px solid #dba5d2;
+    border-bottom:50px solid #d19bcf;
 
 }
-
-/* Letter */
 
 .letter{
 
     width:120px;
-
     height:80px;
 
     background:white;
@@ -239,34 +162,22 @@ button:hover{
     position:absolute;
 
     left:15px;
-
     top:10px;
-
-    border-radius:6px;
 
     transition:.5s;
 
-    z-index:-1;
-
 }
-
-/* Envelope Animation */
 
 #envelope:hover .letter{
 
-    top:-30px;
+    top:-20px;
 
 }
+
 #letterText{
 
     text-align:left;
-
-    line-height:1.8;
-
-    font-size:18px;
-
-    min-height:260px;
-
     white-space:pre-wrap;
+    line-height:1.7;
 
 }
