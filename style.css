@@ -5,7 +5,23 @@
 }
 
 body{
+    height:100vh;
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#ff9ecf,#ffd6e8);
+}
 
+/* ALL SCREENS */
+
+#welcomeScreen,
+#searchScreen,
+#boyfriendScreen,
+#envelopeScreen,
+#letterScreen,
+#photo1Screen,
+#photo2Screen,
+#finalScreen{
+
+    width:100%;
     height:100vh;
 
     display:flex;
@@ -14,15 +30,13 @@ body{
 
     align-items:center;
 
-    font-family:Arial, Helvetica, sans-serif;
-
-    background:linear-gradient(135deg,#ff9ecf,#ffd6e8);
-
 }
+
+/* CARD */
 
 .card{
 
-    width:400px;
+    width:420px;
 
     background:white;
 
@@ -36,6 +50,8 @@ body{
 
 }
 
+/* HEADINGS */
+
 h1{
 
     color:#ff3d7f;
@@ -44,17 +60,31 @@ h1{
 
 }
 
-p{
+h2{
+
+    color:#ff3d7f;
 
     margin-bottom:20px;
 
 }
 
+/* TEXT */
+
+p{
+
+    margin-bottom:20px;
+
+    font-size:18px;
+
+}
+
+/* INPUT */
+
 input{
 
     width:100%;
 
-    padding:12px;
+    padding:14px;
 
     border-radius:10px;
 
@@ -62,13 +92,23 @@ input{
 
     font-size:16px;
 
+    outline:none;
+
 }
+
+input:focus{
+
+    border-color:#ff3d7f;
+
+}
+
+/* BUTTON */
 
 button{
 
-    margin-top:20px;
-
     width:100%;
+
+    margin-top:20px;
 
     padding:14px;
 
@@ -84,47 +124,136 @@ button{
 
     cursor:pointer;
 
+    transition:.3s;
+
 }
 
 button:hover{
 
     background:#ff1f6b;
 
+    transform:scale(1.03);
+
 }
 
-#message{
+/* MESSAGES */
+
+#message,
+#boyfriendMessage{
 
     margin-top:20px;
 
     font-weight:bold;
 
 }
-#searchScreen{
 
-    text-align:center;
+/* LOVE SCANNER */
 
-    background:white;
-
-    width:500px;
-
-    padding:40px;
-
-    border-radius:20px;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
+#loadingText{
 
     line-height:2;
 
-    font-size:22px;
+    font-size:20px;
 
 }
+
+/* ENVELOPE */
+
 #envelope{
-    font-size:100px;
+
+    width:150px;
+    height:100px;
+
+    margin:30px auto;
+
+    background:#f6d4ec;
+
+    position:relative;
+
     cursor:pointer;
-    margin:30px 0;
-    transition:0.3s;
+
+    border-radius:8px;
+
+    transition:.4s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
 }
 
 #envelope:hover{
-    transform:scale(1.15) rotate(-5deg);
+
+    transform:scale(1.08);
+
+}
+
+/* Top flap */
+
+#envelope::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:0;
+    height:0;
+
+    border-left:75px solid transparent;
+    border-right:75px solid transparent;
+    border-top:50px solid #ebc0df;
+
+}
+
+/* Bottom flap */
+
+#envelope::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+    left:0;
+
+    width:0;
+    height:0;
+
+    border-left:75px solid transparent;
+    border-right:75px solid transparent;
+    border-bottom:50px solid #dba5d2;
+
+}
+
+/* Letter */
+
+.letter{
+
+    width:120px;
+
+    height:80px;
+
+    background:white;
+
+    position:absolute;
+
+    left:15px;
+
+    top:10px;
+
+    border-radius:6px;
+
+    transition:.5s;
+
+    z-index:-1;
+
+}
+
+/* Envelope Animation */
+
+#envelope:hover .letter{
+
+    top:-30px;
+
 }
